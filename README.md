@@ -30,6 +30,7 @@ Build a technical documentation application using Flexbox, pseudo-classes, fixed
 
 - Solution URL: [View Code in GitHub](https://github.com/14thommi/freeCodeCamp-technical-documentation)
 - Live Site URL: [View Live Site](https://14thommi.github.io/freeCodeCamp-technical-documentation/)
+- Figma Wireframe: [Private Wireframe Link](https://www.figma.com/file/zyURXqsbIebDAWeqZXRCWV/freeCodeCamp---Technical-Documentation?t=APSl6KP3rQQPTw1d-6)
 
 
 ### Requirements
