@@ -11,6 +11,7 @@ This is a solution to the [Technical Documenation on freeCodeCamp]([https://www.
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Comparing to the source solution](#Comparing-to-the-source-solution)
   - [Continued development](#continued-development)
 
 
@@ -26,42 +27,38 @@ Build a technical documentation application using Flexbox, pseudo-classes, fixed
 
 ### Links
 
-- Solution URL: [View Code in GitHub](https://github.com/14thommi/frontend-mentor-qr-code-component)
+- Solution URL: [View Code in GitHub](https://github.com/14thommi/freeCodeCamp-technical-documentation)
 - Live Site URL: [View Live Site](https://14thommi.github.io/frontend-mentor-qr-code-component/)
 
-
-## My process
 
 ### Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
-- Styles
-  - Font family: [Outfit](https://fonts.google.com/specimen/Outfit) by On Brand Investment Pty Ltd, Rodrigo Fuenzalida
+- Media Query
 
 
 ### What I learned
 
-I learned how to fix an element to the bottom of a screen and have the element appear centered. Because a DIV is aligned from its position at the top and left edge, the element will not appear center unless you add `transform: translate(-50%, -50%);` which will make the alignement edge  of the DIV at its center.
+I learned a few important lessons:
+
+1. I tried to make the navbar dynamic to show on the left when wide screen and then go to the top of the screen when in a mobile view using Flexbox. The only issue was flexbox did not fix the link elements of the navbar to the same spot on the screen without scrolling. I thus pivoted to accomplish this by having the navbar `position: fixed` and use a media query to unfix the navbar so it sticks to the top of the screen.
 
 
-```html
-  <div class="attribution">
-    ...
-  </div>
-```
-```css
-.attribution {
-    position: fixed;
-    bottom: 2rem;
-    left: 50%;
-    /* transform then translate ensures the element is not aligned with the left of the DIV at (left 50%) but instead the center of the DIV */
-    transform: translate(-50%, -50%);
-    margin: 0 auto;
-}
-```
+### Comparing to the source solution
+
+When comparing my code to the source code I want to point out a few techniques I should consider using in the future:
+
+1. The `.main-section` element had two children `header` & `article` in the source code. By bucketing `p`, `code`, & `li` elements in an `article` they were able style the block instead of each individual element type. For example, I used `margin-left: 3rem;` for all elements where as I could have bucketing them into an `article` or `div` element and do that setting once.
+2. To hide the horizontal scroll bar for the `navbar` when in mobile view considering using the following:
+
+  ```css
+  nav {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  ```
 
 
 ### Continued development
